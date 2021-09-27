@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_inicio"
-        android:name="com.example.inmoniliarialuceromoviles.ui.inicio.InicioFragment"
+        android:name="com.example.inmoniliarialuceromoviles.ui.inicio.MapaFragment"
         android:label="@string/menu_inicio"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/fragment_mapa" />
 
     <fragment
         android:id="@+id/nav_perfil"
@@ -25,20 +25,20 @@
 
     <fragment
         android:id="@+id/nav_inquilino"
-        android:name="com.example.inmoniliarialuceromoviles.ui.inicio.InicioFragment"
+        android:name="com.example.inmoniliarialuceromoviles.ui.inquilino.InquilinoFragment"
         android:label="@string/menu_inquilino"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/inquilino_fragment" />
 
     <fragment
         android:id="@+id/nav_contrato"
-        android:name="com.example.inmoniliarialuceromoviles.ui.perfil.PerfilFragment"
+        android:name="com.example.inmoniliarialuceromoviles.ui.contrato.ContratoFragment"
         android:label="@string/menu_contrato"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/contrato_fragment" />
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.example.inmoniliarialuceromoviles.ui.inmueble.InmuebleFragment"
+        android:name="com.example.inmoniliarialuceromoviles.ui.logout.logoutFragment"
         android:label="@string/menu_logout"
-        tools:layout="@layout/fragment_inmueble" />
+        tools:layout="@layout/logout_fragment" />
 
 </navigation>

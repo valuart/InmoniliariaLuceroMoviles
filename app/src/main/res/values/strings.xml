@@ -20,6 +20,7 @@
     <string name="tv_error">Error</string>
 
     <string name="et_id">ID</string>
+    <string name="tv_id">ID</string>
     <string name="et_nombre">Nombre</string>
     <string name="et_apellido">Apellido</string>
     <string name="et_dni">Dni</string>

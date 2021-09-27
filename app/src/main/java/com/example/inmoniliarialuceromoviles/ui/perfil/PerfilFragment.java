@@ -4,19 +4,29 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.inmoniliarialuceromoviles.R;
+import com.example.inmoniliarialuceromoviles.modelo.Propietario;
 
 
 public class PerfilFragment extends Fragment {
 
     private PerfilViewModel pViewModel;
+    private EditText name, lastName, document, mail, pass, phone;
+    private TextView id;
+    private Button editar, guardar;
+    private ImageView avatarP;
 
     public static PerfilFragment newInstance() {
         return new PerfilFragment();
@@ -25,14 +35,104 @@ public class PerfilFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_perfil, container, false);
+
+        View vistaPerfil = inflater.inflate(R.layout.fragment_perfil, container, false);
+
+        inicializar(vistaPerfil);
+        pViewModel =  ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PerfilViewModel.class);
+
+        //observer mutable Propietario
+        pViewModel.getPropietarioMutable().observe(getViewLifecycleOwner(), new Observer<Propietario>() {
+
+            @Override
+            public void onChanged(Propietario propietario) {
+
+                id.setText(" "+propietario.getId());
+                document.setText(propietario.getDni().toString());
+                name.setText(propietario.getNombre());
+                lastName.setText(propietario.getApellido());
+                mail.setText(propietario.getEmail());
+                pass.setText(propietario.getContraseña());
+                phone.setText(propietario.getTelefono());
+                avatarP.setImageResource(propietario.getAvatar());
+
+            }
+        });
+
+        pViewModel.getEditable().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                //etId.setEnabled(aBoolean);
+                document.setEnabled(aBoolean);
+                name.setEnabled(aBoolean);
+                lastName.setEnabled(aBoolean);
+                mail.setEnabled(aBoolean);
+                pass.setEnabled(aBoolean);
+                phone.setEnabled(aBoolean);
+
+            }
+        });
+
+        pViewModel.getVeditar().observe(getViewLifecycleOwner(), new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                editar.setVisibility(integer);
+            }
+        });
+
+        pViewModel.getVguardar().observe(getViewLifecycleOwner(), new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                guardar.setVisibility(integer);
+            }
+        });
+
+        pViewModel.obtenerUsuarioActual();
+        return vistaPerfil;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        pViewModel = new ViewModelProvider(this).get(PerfilViewModel.class);
-        // TODO: Use the ViewModel
+
+    private void inicializar(View vistaPerfil) {
+       // pViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PerfilViewModel.class);
+
+        id = vistaPerfil.findViewById(R.id.tvId);
+        document = vistaPerfil.findViewById(R.id.etDocument);
+        name = vistaPerfil.findViewById(R.id.etName);
+        lastName = vistaPerfil.findViewById(R.id.etLastName);
+        mail = vistaPerfil.findViewById(R.id.etCorreo);
+        pass = vistaPerfil.findViewById(R.id.etPass);
+        phone = vistaPerfil.findViewById(R.id.etPhone);
+        avatarP = vistaPerfil.findViewById(R.id.ivFotoP);
+        editar = vistaPerfil.findViewById(R.id.btEditar);
+        guardar = vistaPerfil.findViewById(R.id.btGuardar);
+
+        //editar habilita la edicion
+        editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pViewModel.guardarDatos();
+
+            }
+        });
+
+        //guarda cambios y deshabilita la edicion
+        guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Propietario p = new Propietario();
+              //  p.setId(Integer.parseInt(id.getText().toString()));
+                p.setDni(Long.parseLong(document.getText().toString()));
+                p.setNombre(name.getText().toString());
+                p.setApellido(lastName.getText().toString());
+                p.setEmail(mail.getText().toString());
+                p.setContraseña(pass.getText().toString());
+                p.setTelefono(phone.getText().toString());
+
+                pViewModel.editarDatos(p);
+
+            }
+        });
+
     }
 
 }
