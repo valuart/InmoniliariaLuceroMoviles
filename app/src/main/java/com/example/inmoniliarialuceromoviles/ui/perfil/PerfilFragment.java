@@ -36,10 +36,11 @@ public class PerfilFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
+        pViewModel = new ViewModelProvider(this).get(PerfilViewModel.class);
+
         View vistaPerfil = inflater.inflate(R.layout.fragment_perfil, container, false);
 
         inicializar(vistaPerfil);
-        pViewModel =  ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PerfilViewModel.class);
 
         //observer mutable Propietario
         pViewModel.getPropietarioMutable().observe(getViewLifecycleOwner(), new Observer<Propietario>() {
@@ -47,7 +48,7 @@ public class PerfilFragment extends Fragment {
             @Override
             public void onChanged(Propietario propietario) {
 
-                id.setText(" "+propietario.getId());
+                id.setText(propietario.getId()+"");
                 document.setText(propietario.getDni().toString());
                 name.setText(propietario.getNombre());
                 lastName.setText(propietario.getApellido());
@@ -62,7 +63,7 @@ public class PerfilFragment extends Fragment {
         pViewModel.getEditable().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean aBoolean) {
-                //etId.setEnabled(aBoolean);
+
                 document.setEnabled(aBoolean);
                 name.setEnabled(aBoolean);
                 lastName.setEnabled(aBoolean);
@@ -93,7 +94,6 @@ public class PerfilFragment extends Fragment {
 
 
     private void inicializar(View vistaPerfil) {
-       // pViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PerfilViewModel.class);
 
         id = vistaPerfil.findViewById(R.id.tvId);
         document = vistaPerfil.findViewById(R.id.etDocument);
@@ -120,7 +120,7 @@ public class PerfilFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Propietario p = new Propietario();
-              //  p.setId(Integer.parseInt(id.getText().toString()));
+                p.setId(Integer.parseInt(id.getText().toString()));
                 p.setDni(Long.parseLong(document.getText().toString()));
                 p.setNombre(name.getText().toString());
                 p.setApellido(lastName.getText().toString());

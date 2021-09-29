@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     private void iniciarHeader(NavigationView navigationView) {
         View header = navigationView.getHeaderView(0);
         ImageView avatar = header.findViewById(R.id.ivAvatar);
-        TextView nombre = header.findViewById(R.id.tvNombre);
+        TextView nombre = header.findViewById(R.id.tvDirec);
         TextView email = header.findViewById(R.id.tvEmail);
         Propietario p = (Propietario) getIntent().getBundleExtra("propietario").getSerializable("propietario");
         avatar.setImageResource(p.getAvatar());

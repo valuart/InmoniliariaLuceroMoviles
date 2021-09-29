@@ -21,13 +21,31 @@
         android:id="@+id/nav_inmueble"
         android:name="com.example.inmoniliarialuceromoviles.ui.inmueble.InmuebleFragment"
         android:label="@string/menu_inmueble"
-        tools:layout="@layout/fragment_inmueble" />
+        tools:layout="@layout/fragment_inmueble" >
+        <action
+            android:id="@+id/action_nav_inmueble_to_inmuDetalleFragment"
+            app:destination="@id/inmuDetalleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inmuDetalleFragment"
+        android:name="com.example.inmoniliarialuceromoviles.ui.inmueble.InmuDetalleFragment"
+        android:label="inmu_detalle_fragment"
+        tools:layout="@layout/inmu_detalle_fragment" >
+        <action
+            android:id="@+id/action_inmuDetalleFragment_to_nav_inmueble"
+            app:destination="@id/nav_inmueble" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_inquilino"
         android:name="com.example.inmoniliarialuceromoviles.ui.inquilino.InquilinoFragment"
         android:label="@string/menu_inquilino"
-        tools:layout="@layout/inquilino_fragment" />
+        tools:layout="@layout/inquilino_fragment" >
+        <action
+            android:id="@+id/action_nav_inquilino_to_inquiDetalleFragment"
+            app:destination="@id/inquiDetalleFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_contrato"
@@ -40,5 +58,15 @@
         android:name="com.example.inmoniliarialuceromoviles.ui.logout.logoutFragment"
         android:label="@string/menu_logout"
         tools:layout="@layout/logout_fragment" />
+    <fragment
+        android:id="@+id/inquiDetalleFragment"
+        android:name="com.example.inmoniliarialuceromoviles.ui.inquilino.InquiDetalleFragment"
+        android:label="inqui_detalle_fragment"
+        tools:layout="@layout/inqui_detalle_fragment" >
+        <action
+            android:id="@+id/action_inquiDetalleFragment_to_nav_inquilino"
+            app:destination="@id/nav_inquilino" />
+    </fragment>
+
 
 </navigation>

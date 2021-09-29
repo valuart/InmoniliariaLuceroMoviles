@@ -28,21 +28,22 @@ public class logoutFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root =  inflater.inflate(R.layout.logout_fragment, container, false);
-        notificacion();
+        logout();
         return root;
 
     }
-    public void notificacion() {
-        new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme)
+    public void logout() {
+        new AlertDialog.Builder(getContext()) //R.style.AlertDialogTheme)
                 .setTitle("Cerrar Sesión")
-                .setMessage("¿Desea cerrar la Sesión?")
-                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                .setMessage("¿Esta seguro?")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
                         System.exit(0);
                     }
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Declinar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main).navigate(R.id.nav_inicio);

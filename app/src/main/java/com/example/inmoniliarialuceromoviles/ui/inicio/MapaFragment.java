@@ -34,12 +34,12 @@ public class MapaFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng Inmobiliaria = new LatLng(-33.2727206, 66.3255049);
+            LatLng Inmobiliaria = new LatLng(-33.29690, 66.33100);
             CameraPosition camPos = new CameraPosition.Builder()
                     .target(Inmobiliaria)
-                    .zoom(70)
+                    .zoom(19)
                     .bearing(45)
-                    .tilt(90)
+                    .tilt(70)
                     .build();
             CameraUpdate camUpd = CameraUpdateFactory.newCameraPosition(camPos);
             googleMap.addMarker(new MarkerOptions().position(Inmobiliaria).title("Inmobiliaria Lucero"));
