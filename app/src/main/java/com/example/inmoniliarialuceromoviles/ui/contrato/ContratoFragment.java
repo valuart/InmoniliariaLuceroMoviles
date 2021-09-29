@@ -37,7 +37,7 @@ public class ContratoFragment extends Fragment {
 
         conViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(ContratoViewModel.class);
 
-        View root = inflater.inflate(R.layout.inquilino_fragment, container, false);
+        View root = inflater.inflate(R.layout.contrato_fragment, container, false);
 
         rvCon = root.findViewById(R.id.rvContratos);
 
