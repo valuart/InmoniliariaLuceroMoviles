@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,7 +25,7 @@ import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 public class InmuDetalleFragment extends Fragment {
     private ImageView fotoInm;
-    private TextView id, direccion, uso, ambientes, tipo, precio;
+    private EditText id, direccion, uso, ambientes, tipo, precio;
     private CheckBox estado;
 
     private InmuDetalleViewModel mViewModel;
@@ -72,12 +73,12 @@ public class InmuDetalleFragment extends Fragment {
     }
 
      private void inicializar(View view){
-        id = view.findViewById(R.id.tvCodigo);
-        direccion = view.findViewById(R.id.tvDire);
-        uso = view.findViewById(R.id.tvUso);
-        tipo = view.findViewById(R.id.tvTipo);
-        ambientes = view.findViewById(R.id.tvAmbiente);
-        precio = view.findViewById(R.id.tvPre);
+        id = view.findViewById(R.id.etCodigo);
+        direccion = view.findViewById(R.id.etDire);
+        uso = view.findViewById(R.id.etUso);
+        tipo = view.findViewById(R.id.etTipo);
+        ambientes = view.findViewById(R.id.etAmbiente);
+        precio = view.findViewById(R.id.etPrecio);
         estado = view.findViewById(R.id.cbEstado);
         fotoInm = view.findViewById(R.id.ivfotoInmu);
 

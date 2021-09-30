@@ -43,7 +43,7 @@ public class PagoFragment extends Fragment {
         pViewModel.getPagos().observe(getViewLifecycleOwner(), new Observer<ArrayList<Pago>>() {
             @Override
             public void onChanged(ArrayList<Pago> pagos) {
-                GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1, GridLayoutManager.VERTICAL, false);
                 rvPagos.setLayoutManager(gridLayoutManager);
                 pa = new PagoAdapter(pagos, root, getLayoutInflater());
                 rvPagos.setAdapter(pa);

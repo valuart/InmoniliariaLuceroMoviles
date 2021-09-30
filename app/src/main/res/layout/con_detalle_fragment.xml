@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#B1A3C8"
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,148 +17,176 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvTitulo"
-                android:layout_width="268dp"
-                android:layout_height="34dp"
-                android:layout_marginStart="139dp"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="139dp"
-                android:text="Informacion Contrato"
-                android:textAlignment="center"
-                android:textSize="24sp"
+                android:id="@+id/tvTituloCodigo"
+                android:layout_width="150dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="266dp"
+                android:text="CODIGO:"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvTituloCodigo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="34dp"
-                android:layout_marginTop="43dp"
-                android:text="Codigo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
-
-            <TextView
                 android:id="@+id/tvCodCon"
-                android:layout_width="77dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="40dp"
-                app:layout_constraintStart_toEndOf="@+id/tvTituloCodigo"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
-
-            <TextView
-                android:id="@+id/tvTitF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
-                android:layout_marginTop="61dp"
-                android:text="Fecha Inicio"
+                android:layout_width="159dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="189dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTituloCodigo" />
 
             <TextView
-                android:id="@+id/tvFechaI"
-                android:layout_width="78dp"
-                android:layout_height="19dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="63dp"
-                app:layout_constraintStart_toEndOf="@+id/tvTitF"
+                android:id="@+id/tvTitF"
+                android:layout_width="123dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="258dp"
+                android:text="FECHA INICIO:"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvCodCon" />
 
             <TextView
-                android:id="@+id/tvFecha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="123dp"
-                android:text="Fecha Fin"
-                app:layout_constraintStart_toEndOf="@+id/tvFechaI"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="69dp"
-                android:layout_height="22dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="123dp"
-                app:layout_constraintStart_toEndOf="@+id/tvFecha"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
-
-            <TextView
-                android:id="@+id/tvMonto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="56dp"
-                android:text="Monto"
+                android:id="@+id/tvFechaI"
+                android:layout_width="166dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="190dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTitF" />
 
             <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="108dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="232dp"
+                android:layout_marginEnd="70dp"
+                android:text="FECHA FIN:"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvTitF"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="171dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@+id/tvFechaI"
+                app:layout_constraintTop_toBottomOf="@+id/tvFecha" />
+
+            <TextView
+                android:id="@+id/tvMonto"
+                android:layout_width="115dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="49dp"
+                android:layout_marginEnd="291dp"
+                android:text="MONTO:"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFechaI" />
+
+            <TextView
                 android:id="@+id/tvMontoAl"
-                android:layout_width="77dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="57dp"
+                android:layout_width="174dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="186dp"
                 android:text="     "
-                app:layout_constraintStart_toEndOf="@+id/tvMonto"
-                app:layout_constraintTop_toBottomOf="@+id/tvFechaI"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMonto"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/tvInq"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="34dp"
-                android:layout_marginTop="57dp"
-                android:text="Inquilino"
+                android:layout_width="195dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="289dp"
+                android:text="NOMBRE INQUILINO"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvMonto" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMontoAl" />
 
             <TextView
                 android:id="@+id/tvInqCon"
-                android:layout_width="78dp"
-                android:layout_height="22dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="340dp"
-                app:layout_constraintStart_toEndOf="@+id/tvInq"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tvInmu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="52dp"
-                android:text="Inmueble"
+                android:layout_width="205dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="185dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvInq" />
 
             <TextView
-                android:id="@+id/tvInmuCon"
-                android:layout_width="74dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="52dp"
-                app:layout_constraintStart_toEndOf="@+id/tvInmu"
+                android:id="@+id/tvInmu"
+                android:layout_width="173dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="284dp"
+                android:text="DIRECCION INMUEBLE"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvInqCon" />
+
+            <TextView
+                android:id="@+id/tvInmuCon"
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInmu" />
 
             <Button
                 android:id="@+id/btPagos"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="73dp"
-                android:layout_marginEnd="187dp"
-                android:layout_marginBottom="176dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="311dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="72dp"
+                android:background="#994AA6"
                 android:text="Pagos"
+                android:textColor="@color/white"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvInmuCon" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvInmuCon"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </FrameLayout>

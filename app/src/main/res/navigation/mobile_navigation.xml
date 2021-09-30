@@ -83,7 +83,7 @@
     <fragment
         android:id="@+id/conDetalleFragment"
         android:name="com.example.inmoniliarialuceromoviles.ui.contrato.ConDetalleFragment"
-        android:label="Dettale contrato"
+        android:label="Detalle contrato"
         tools:layout="@layout/con_detalle_fragment" >
         <action
             android:id="@+id/action_conDetalleFragment_to_nav_contrato"

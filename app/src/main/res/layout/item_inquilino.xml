@@ -18,61 +18,52 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="159dp"
+        android:layout_height="280dp">
 
         <ImageView
             android:id="@+id/ivImagenInmu"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+        <TextView
+            android:id="@+id/tvDir"
+            android:layout_width="81dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="39dp"
+            android:textColor="#A27AAE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivImagenInmu" />
+
+        <Button
+            android:id="@+id/btVer"
+            android:layout_width="71dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="50dp"
+            android:background="#B466C1"
+            android:padding="5dp"
+            android:text="Ver"
+            android:textAlignment="center"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivImagenInmu">
-
-
-            <Button
-                android:id="@+id/btVer"
-                android:layout_width="0dp"
-                android:layout_height="25dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:text="Ver"
-                android:padding="5dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDir" />
-
-            <TextView
-                android:id="@+id/tvDir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="TextView"
-                android:textColor="#A27AAE"
-                app:layout_constraintBottom_toTopOf="@+id/btVer"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tvDir"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
