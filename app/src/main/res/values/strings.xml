@@ -31,5 +31,10 @@
     <string name="et_precio">Precio</string>
     <string name="et_direccion">Direccion</string>
 
+    <string name="inmu_detalle_fragment">Detalle inmueble</string>
+    <string name="inqui_detalle_fragment">Detalle inquilino</string>
+    <string name="con_detalle_fragment">Detalle contrato</string>
+    <string name="pago_fragment">Pagos</string>
+
 
 </resources>

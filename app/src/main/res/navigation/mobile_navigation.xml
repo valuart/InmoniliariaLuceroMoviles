@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/inmuDetalleFragment"
         android:name="com.example.inmoniliarialuceromoviles.ui.inmueble.InmuDetalleFragment"
-        android:label="inmu_detalle_fragment"
+        android:label="Detalle inmueble"
         tools:layout="@layout/inmu_detalle_fragment" >
         <action
             android:id="@+id/action_inmuDetalleFragment_to_nav_inmueble"
@@ -65,7 +65,7 @@
     <fragment
         android:id="@+id/inquiDetalleFragment"
         android:name="com.example.inmoniliarialuceromoviles.ui.inquilino.InquiDetalleFragment"
-        android:label="inqui_detalle_fragment"
+        android:label="Detalle inquilino"
         tools:layout="@layout/inqui_detalle_fragment" >
         <action
             android:id="@+id/action_inquiDetalleFragment_to_nav_inquilino"
@@ -74,7 +74,7 @@
     <fragment
         android:id="@+id/pagoFragment"
         android:name="com.example.inmoniliarialuceromoviles.ui.contrato.PagoFragment"
-        android:label="pago_fragment"
+        android:label="Pagos"
         tools:layout="@layout/pago_fragment" >
         <action
             android:id="@+id/action_pagoFragment_to_conDetalleFragment"
@@ -83,7 +83,7 @@
     <fragment
         android:id="@+id/conDetalleFragment"
         android:name="com.example.inmoniliarialuceromoviles.ui.contrato.ConDetalleFragment"
-        android:label="con_detalle_fragment"
+        android:label="Dettale contrato"
         tools:layout="@layout/con_detalle_fragment" >
         <action
             android:id="@+id/action_conDetalleFragment_to_nav_contrato"
