@@ -30,4 +30,6 @@
 
     <string name="et_precio">Precio</string>
     <string name="et_direccion">Direccion</string>
+
+
 </resources>
