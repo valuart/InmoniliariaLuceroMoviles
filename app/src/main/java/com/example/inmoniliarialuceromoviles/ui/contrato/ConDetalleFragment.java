@@ -45,21 +45,21 @@ public class ConDetalleFragment extends Fragment {
         cdViewModel.getContrato().observe(getViewLifecycleOwner(), new Observer<Contrato>() {
             @Override
             public void onChanged(Contrato contrato) {
-                id.setText(contrato.getIdContrato() + "");
+                id.setText(contrato.getIdContrato()+"");
                 fechaIni.setText(contrato.getFechaInicio());
                 fechaF.setText(contrato.getFechaFin());
                 monto.setText(contrato.getMontoAlquiler()+"");
-                nomInqu.setText(contrato.getInquilino().getNombre() + " " + contrato.getInquilino().getApellido()+"");
+                nomInqu.setText(contrato.getInquilino().getNombre()+" "+contrato.getInquilino().getApellido());
                 dirInm.setText(contrato.getInmueble().getDireccion()+"");
-                pagoAl.setOnClickListener((new View.OnClickListener() {
+                pagoAl.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Bundle bundle = new Bundle();
-                        bundle.putSerializable("pagos", contrato);
+                        bundle.putSerializable("contrato", contrato);
                         Navigation.findNavController(view).navigate(R.id.pagoFragment, bundle);
 
                     }
-                 }));
+                 });
             }
 
         });

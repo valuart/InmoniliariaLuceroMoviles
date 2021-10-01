@@ -63,7 +63,6 @@ public class PerfilFragment extends Fragment {
         pViewModel.getEditable().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean aBoolean) {
-
                 document.setEnabled(aBoolean);
                 name.setEnabled(aBoolean);
                 lastName.setEnabled(aBoolean);
@@ -94,7 +93,6 @@ public class PerfilFragment extends Fragment {
 
 
     private void inicializar(View vistaPerfil) {
-
         id = vistaPerfil.findViewById(R.id.tvId);
         document = vistaPerfil.findViewById(R.id.etDocument);
         name = vistaPerfil.findViewById(R.id.etName);

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
@@ -25,6 +26,7 @@ public class ContratoFragment extends Fragment {
     private RecyclerView rvCon;
     private ContratoViewModel conViewModel;
     private ContratoAdapter ca;
+    private TextView msj;
 
 
     public static ContratoFragment newInstance() {
@@ -40,6 +42,7 @@ public class ContratoFragment extends Fragment {
         View root = inflater.inflate(R.layout.contrato_fragment, container, false);
 
         rvCon = root.findViewById(R.id.rvContratos);
+        msj = root.findViewById(R.id.tvMC);
 
         conViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<ArrayList<Inmueble>>() {
             @Override

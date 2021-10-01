@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">InmoniliariaLuceroMoviles</string>
+    <string name="app_name">Inmoniliaria Lucero</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -14,7 +14,7 @@
     <string name="menu_contrato">Contrato</string>
     <string name="menu_logout">Logout</string>
 
-    <string name="et_mail">Emal</string>
+    <string name="et_mail">Email</string>
     <string name="et_password">Contraseña</string>
     <string name="bt_ingresar">Ingresar</string>
     <string name="tv_error">Error</string>
