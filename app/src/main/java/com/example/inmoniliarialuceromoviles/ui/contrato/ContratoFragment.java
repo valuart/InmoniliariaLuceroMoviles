@@ -42,7 +42,7 @@ public class ContratoFragment extends Fragment {
         View root = inflater.inflate(R.layout.contrato_fragment, container, false);
 
         rvCon = root.findViewById(R.id.rvContratos);
-        msj = root.findViewById(R.id.tvMC);
+
 
         conViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<ArrayList<Inmueble>>() {
             @Override

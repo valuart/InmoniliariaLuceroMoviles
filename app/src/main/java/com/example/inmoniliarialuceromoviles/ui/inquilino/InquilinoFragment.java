@@ -26,7 +26,7 @@ public class InquilinoFragment extends Fragment {
     private RecyclerView rvInquilino;
     private InquilinoViewModel inqViewModel;
     private InquilinoAdapter ina;
-    private TextView msj;
+
 
 
     @Override
@@ -37,7 +37,7 @@ public class InquilinoFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.inquilino_fragment, container, false);
         rvInquilino = root.findViewById(R.id.rvInquilinos);
-        msj = root.findViewById(R.id.tvMIN);
+
 
         inqViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<ArrayList<Inmueble>>() {
             @Override
