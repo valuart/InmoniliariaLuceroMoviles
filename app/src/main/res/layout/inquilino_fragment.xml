@@ -12,10 +12,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvInquilinos"
-            android:layout_width="415dp"
-            android:layout_height="785dp"
+            android:layout_width="416dp"
+            android:layout_height="771dp"
             android:layout_marginTop="60dp"
-            android:background="#EFEEE1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -35,15 +35,14 @@ public class logoutFragment extends Fragment {
     public void logout() {
         new AlertDialog.Builder(getContext()) //R.style.AlertDialogTheme)
                 .setTitle("Cerrar Sesión")
-                .setMessage("¿Esta seguro?")
-                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                         System.exit(0);
                     }
                 })
-                .setNegativeButton("Declinar", new DialogInterface.OnClickListener() {
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main).navigate(R.id.nav_inicio);

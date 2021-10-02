@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEEE1"
+    android:background="@drawable/background"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -60,6 +60,7 @@
         android:layout_marginEnd="159dp"
         android:hint="@string/bt_ingresar"
         android:text="@string/bt_ingresar"
+        android:background="@drawable/boton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"

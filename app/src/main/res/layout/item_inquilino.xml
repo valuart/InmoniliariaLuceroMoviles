@@ -2,58 +2,53 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_marginStart="10dp"
-    android:layout_marginTop="10dp"
-    app:cardBackgroundColor="#E6D9EA"
+    app:cardBackgroundColor="#CCC6CF"
     app:cardCornerRadius="20dp"
     app:cardElevation="10dp"
     app:contentPadding="10dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="159dp"
-        android:layout_height="280dp">
+        android:layout_width="225dp"
+        android:layout_height="289dp">
 
         <ImageView
             android:id="@+id/ivImagenInmu"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_width="163dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginBottom="7dp"
             android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/tvDir"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/tvDir"
-            android:layout_width="81dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="39dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="39dp"
+            android:layout_width="128dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
             android:textColor="#A27AAE"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivImagenInmu" />
 
         <Button
             android:id="@+id/btVer"
-            android:layout_width="71dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="50dp"
-            android:background="#B466C1"
+            android:layout_width="107dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginBottom="16dp"
             android:padding="5dp"
             android:text="Ver"
             android:textAlignment="center"
@@ -62,7 +57,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDir"
-            app:layout_constraintVertical_bias="0.0"
             tools:ignore="TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
