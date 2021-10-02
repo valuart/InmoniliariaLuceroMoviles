@@ -13,244 +13,258 @@
         android:background="#D0C0D3"
         tools:context=".inquilinos.InquilinoFragment">
 
-
-        <TextView
-            android:id="@+id/tvNombre"
-            android:layout_width="153dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="40dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#130719"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloNombre"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/tvApellido"
-            android:layout_width="156dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="24dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#120219"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloApellido"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/tvDNI"
-            android:layout_width="193dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#231827"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitulodni"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/tvTelefono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#191119"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloTel"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/tvTituloTel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="43dp"
-            android:layout_marginTop="19dp"
-            android:text="TELEFONO:"
-            android:textColor="#1E1D1D"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLugarT" />
-
-        <TextView
-            android:id="@+id/tvGarante"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#1C1720"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloGarante"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/tvTituloTelGar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="216dp"
-            android:text="TELEFONO GARANTE"
-            android:textColor="#1E1D1D"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvGarante" />
-
-        <TextView
-            android:id="@+id/tvEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:ellipsize="end"
-            android:ems="10"
-            android:textColor="#16081B"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloCorreo" />
-
-        <TextView
-            android:id="@+id/tvTituloGarante"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="41dp"
+        <LinearLayout
+            android:id="@+id/tvCodigos"
+            android:layout_width="418dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
-            android:text="GARANTE"
-            android:textColor="#090909"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTelefono" />
-
-        <TextView
-            android:id="@+id/tvTituloCorreo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="49dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="324dp"
-            android:text="EMAIL:"
-            android:textColor="#0B0B0B"
-            android:textSize="16sp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tvTelefonoGarante"
-            android:layout_width="158dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="40dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#120915"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloTelGar"
-            tools:ignore="SpeakableTextPresentCheck" />
+            <TextView
+                android:id="@+id/tvValorCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: "
+                android:textColor="#541ABA"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/tvCodigo"
-            android:layout_width="108dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#20122B"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloid"
-            tools:ignore="SpeakableTextPresentCheck" />
+            <TextView
+                android:id="@+id/tvCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvTituloNombre"
-            android:layout_width="112dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="24dp"
-            android:text="NOMBRE:"
-            android:textColor="#1E1D1D"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvCodigo" />
-
-        <TextView
-            android:id="@+id/tvTituloApellido"
-            android:layout_width="112dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="68dp"
-            android:text="APELLIDO:"
-            android:textColor="#1E1D1D"
-            android:textSize="16sp"
+        <LinearLayout
+            android:id="@+id/tvDNIs"
+            android:layout_width="413dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDNI" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCodigos">
 
-        <TextView
-            android:id="@+id/tvTitulodni"
-            android:layout_width="133dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="76dp"
-            android:text="DNI"
-            android:textColor="#1E1D1D"
-            android:textSize="16sp"
+            <TextView
+                android:id="@+id/tvValorDNI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DNI: "
+                android:textColor="#5D2BB5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvDNI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="DNI"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvNombres"
+            android:layout_width="416dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tvTituloid"
-            android:layout_width="81dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="36dp"
-            android:text="CODIGO:"
-            android:textColor="#1E1D1D"
+            app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/tvDNIs">
 
-        <TextView
-            android:id="@+id/tvTituloTrab"
-            android:layout_width="221dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="28dp"
-            android:text="LUGAR DE TRABAJO"
-            android:textColor="#1E1D1D"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+            <TextView
+                android:id="@+id/tvValorNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOMBRE: "
+                android:textColor="#683CB8"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/tvLugarT"
-            android:layout_width="182dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#18151B"
-            android:textSize="20dp"
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvApellidos"
+            android:layout_width="408dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.588"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloTrab"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/tvNombres">
+
+            <TextView
+                android:id="@+id/tvValorApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="APELLIDO: "
+                android:textColor="#693ABD"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Apellido"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvEmails"
+            android:layout_width="406dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvApellidos">
+
+            <TextView
+                android:id="@+id/tvValorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL: "
+                android:textColor="#6539B5"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvLugarTs"
+            android:layout_width="410dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmails">
+
+            <TextView
+                android:id="@+id/tvValorLugarT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LUGAR DE TRABAJO: "
+                android:textColor="#6B3DBD"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvLugarT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Lugar de Trabajo"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvTelefonos"
+            android:layout_width="410dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLugarTs">
+
+            <TextView
+                android:id="@+id/tvTituloTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TELEFONO: "
+                android:textColor="#6D3FBF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Telefono"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvGarantes"
+            android:layout_width="408dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.588"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTelefonos">
+
+            <TextView
+                android:id="@+id/tvValorGarante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GARANTE: "
+                android:textColor="#693BBA"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvGarante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="GARANTE"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvTelefonoGarantes"
+            android:layout_width="395dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGarantes">
+
+            <TextView
+                android:id="@+id/tvValorTelefonoGarante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TELEFONO GARANTE: "
+                android:textColor="#673AB7"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTelefonoGarante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Telefono Garante"
+                android:textSize="20sp" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,8 +8,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvInmueble"
-        android:layout_width="398dp"
-        android:layout_height="1292dp"
+        android:layout_width="424dp"
+        android:layout_height="1340dp"
+        android:background="#DCDAC9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.727"
