@@ -2,7 +2,9 @@ package com.example.inmoniliarialuceromoviles.ui.perfil;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -10,6 +12,10 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.example.inmoniliarialuceromoviles.modelo.Propietario;
 import com.example.inmoniliarialuceromoviles.request.ApiClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PerfilViewModel extends AndroidViewModel {
     private MutableLiveData<Propietario> propietarioMutable;
@@ -54,18 +60,54 @@ public class PerfilViewModel extends AndroidViewModel {
 
     //usuario Logueado
     public void obtenerUsuarioActual() {
-        ApiClient api = ApiClient.getApi();
-        Propietario p = api.obtenerUsuarioActual();
-        propietarioMutable.setValue(p);
-
+        SharedPreferences sp = ApiClient.conectar(context);
+        String token = sp.getString("token","-1");
+        Call<Propietario> prop = ApiClient.getMyApiClient().obtenerPropietario(token);
+        prop.enqueue(new Callback<Propietario>() {
+            @Override
+            public void onResponse(Call<Propietario> call, Response<Propietario> response) {
+                if(response.isSuccessful()){
+                    propietarioMutable.postValue(response.body());
+                    getEditable().setValue(false);
+                }else{
+                    Toast.makeText(context, "error", Toast.LENGTH_LONG).show();
+                }
+            }
+            @Override
+            public void onFailure(Call<Propietario> call, Throwable t) {
+                Toast.makeText(context, "Ocurrio un error"+t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
+       /* ApiClient api = ApiClient.getApi();
+        Propietario p = api.obtenerUsuarioActual();
+        propietarioMutable.setValue(p);*/
 
     public void editarDatos(Propietario p){
-        ApiClient api = ApiClient.getApi();
+        SharedPreferences sp = ApiClient.conectar(context);
+        String token = sp.getString("token","-1");
+        Call<Propietario> prop = ApiClient.getMyApiClient().editarPropietario(token,p);
+        prop.enqueue(new Callback<Propietario>() {
+            @Override
+            public void onResponse(Call<Propietario> call, Response<Propietario> response) {
+                if(response.isSuccessful()){
+                    propietarioMutable.postValue(response.body());
+                    Toast.makeText(context, "Se edito con exito", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Propietario> call, Throwable t) {
+
+                Toast.makeText(context, "Ocurrio un error"+t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+        /*ApiClient api = ApiClient.getApi();
         api.actualizarPerfil(p);
         veditar.setValue(View.VISIBLE);
-        vguardar.setValue(View.INVISIBLE);
-    }
+        vguardar.setValue(View.INVISIBLE);*/
 
     public void guardarDatos(){
         editable.setValue(true);

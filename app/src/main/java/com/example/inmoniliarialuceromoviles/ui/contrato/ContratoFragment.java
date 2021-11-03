@@ -17,10 +17,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
+import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ContratoFragment extends Fragment {
     private RecyclerView rvCon;
@@ -44,17 +46,18 @@ public class ContratoFragment extends Fragment {
         rvCon = root.findViewById(R.id.rvContratos);
 
 
-        conViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<ArrayList<Inmueble>>() {
+        conViewModel.getContratos().observe(getViewLifecycleOwner(), new Observer<List<Contrato>>() {
             @Override
-            public void onChanged(ArrayList<Inmueble> inmuebles) {
+            public void onChanged(List<Contrato> contratos) {
                 GridLayoutManager gridLayoutManager= new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
                 rvCon.setLayoutManager(gridLayoutManager);
-                ca = new ContratoAdapter(inmuebles,root,getLayoutInflater());
+                ca = new ContratoAdapter(contratos,root,getLayoutInflater());
                 rvCon.setAdapter(ca);
-
 
             }
         });
+
+
         conViewModel.propiedadesAlquiladas();
         return root;
 

@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
+import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inquilino;
 
 public class InquiDetalleFragment extends Fragment {
@@ -37,16 +38,12 @@ public class InquiDetalleFragment extends Fragment {
         indeVM.getInquilino().observe(getViewLifecycleOwner(), new Observer<Inquilino>() {
             @Override
             public void onChanged(Inquilino inquilino) {
-                id.setText(inquilino.getIdInquilino() + "");
-                dni.setText(inquilino.getDNI().toString()+"");
+                id.setText(inquilino.getId() + "");
                 nombre.setText(inquilino.getNombre());
                 apellido.setText(inquilino.getApellido());
-                lugarTrabajo.setText(inquilino.getLugarDeTrabajo());
+                dni.setText(inquilino.getDni()+"");
                 correo.setText(inquilino.getEmail());
                 telefono.setText(inquilino.getTelefono());
-                nombreGarante.setText(inquilino.getNombreGarante());
-                telefonoGarante.setText(inquilino.getTelefonoGarante());
-
             }
         });
 

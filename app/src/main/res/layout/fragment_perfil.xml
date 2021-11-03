@@ -7,31 +7,6 @@
     android:background="@drawable/background"
     tools:context=".ui.perfil.PerfilFragment">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="85dp"
-        android:text="Codigo:"
-        app:layout_constraintEnd_toStartOf="@+id/ivFotoP"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvId"
-        android:layout_width="74dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="104dp"
-        android:hint="@string/tv_id"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:ignore="TextContrastCheck" />
-
     <ImageView
         android:id="@+id/ivFotoP"
         android:layout_width="106dp"

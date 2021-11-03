@@ -19,6 +19,7 @@ import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Pago;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PagoFragment extends Fragment {
     private RecyclerView rvPagos;
@@ -40,9 +41,9 @@ public class PagoFragment extends Fragment {
 
         rvPagos = root.findViewById(R.id.rvPagos);
 
-        pViewModel.getPagos().observe(getViewLifecycleOwner(), new Observer<ArrayList<Pago>>() {
+        pViewModel.getPagos().observe(getViewLifecycleOwner(), new Observer<List<Pago>>() {
             @Override
-            public void onChanged(ArrayList<Pago> pagos) {
+            public void onChanged(List<Pago> pagos) {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1, GridLayoutManager.VERTICAL, false);
                 rvPagos.setLayoutManager(gridLayoutManager);
                 pa = new PagoAdapter(pagos, root, getLayoutInflater());

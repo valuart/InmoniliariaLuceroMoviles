@@ -1,5 +1,6 @@
 package com.example.inmoniliarialuceromoviles.ui.inquilino;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,19 +16,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.inmoniliarialuceromoviles.R;
+import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
+import com.example.inmoniliarialuceromoviles.modelo.Inquilino;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class InquilinoAdapter extends RecyclerView.Adapter<InquilinoAdapter.ViewHolder>  {
-    private ArrayList<Inmueble> lista;
+    private List<Contrato> lista;
     private View root;
     private LayoutInflater layoutInflater;
+    private Context context;
 
-    public InquilinoAdapter(ArrayList<Inmueble> inmuebles, View root, LayoutInflater layoutInflater) {
-        this.lista = inmuebles;
+    public InquilinoAdapter(List<Contrato> contrato, View root, LayoutInflater layoutInflater) {
+        this.lista = contrato;
         this.root = root;
         this.layoutInflater = layoutInflater;
+
     }
     @NonNull
     @Override
@@ -38,18 +44,21 @@ public class InquilinoAdapter extends RecyclerView.Adapter<InquilinoAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull InquilinoAdapter.ViewHolder holder, int position) {
-        Inmueble i = lista.get(position);
-        Glide.with(root.getContext())
-                .load(lista.get(position).getImagen())
+        Contrato i = lista.get(position);
+        Inmueble inmu = i.getInmueble();
+        Inquilino inqu = i.getInquilino();
+        holder.tvdir.setText(inmu.getDireccion());
+        Glide.with(context)
+                .load("https://192.168.0.101:45457"+inmu.getImagen())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.foto);
-        holder.tvdir.setText(lista.get(position).getDireccion());
+
 
         holder.ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("inmueble", i);
+                bundle.putSerializable("inquilino", inqu);
                 Navigation.findNavController(root).navigate(R.id.inquiDetalleFragment,bundle);
 
             }

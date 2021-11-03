@@ -48,9 +48,7 @@ public class InmuDetalleFragment extends Fragment {
             public void onChanged(Inmueble inmueble) {
                 id.setText(inmueble.getIdInmueble() + "");
                 direccion.setText(inmueble.getDireccion());
-                uso.setText(inmueble.getUso());
                 tipo.setText(inmueble.getTipo());
-                ambientes.setText(inmueble.getAmbientes() + "");
                 precio.setText(String.valueOf(inmueble.getPrecio()));
                 estado.setChecked(inmueble.isEstado());
                 estado.setOnClickListener(new View.OnClickListener() {

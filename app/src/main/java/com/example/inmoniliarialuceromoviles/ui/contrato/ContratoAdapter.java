@@ -1,5 +1,6 @@
 package com.example.inmoniliarialuceromoviles.ui.contrato;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,17 +16,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.inmoniliarialuceromoviles.R;
+import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ContratoAdapter extends RecyclerView.Adapter <ContratoAdapter.ViewHolder>{
-    private ArrayList<Inmueble> lista;
+    private List<Contrato> lista;
     private View root;
     private LayoutInflater layoutInflater;
+    private Context context;
 
-    public ContratoAdapter(ArrayList<Inmueble> inmuebles, View root, LayoutInflater layoutInflater) {
-        this.lista = inmuebles;
+    public ContratoAdapter(List<Contrato> contratos, View root, LayoutInflater layoutInflater) {
+        this.lista = contratos;
         this.root = root;
         this.layoutInflater = layoutInflater;
     }
@@ -39,18 +43,20 @@ public class ContratoAdapter extends RecyclerView.Adapter <ContratoAdapter.ViewH
 
     @Override
     public void onBindViewHolder(@NonNull ContratoAdapter.ViewHolder holder, int position) {
-        Inmueble i = lista.get(position);
-        Glide.with(root.getContext())
-                .load(lista.get(position).getImagen())
+        Contrato c = lista.get(position);
+        Inmueble inmu = c.getInmueble();
+        holder.tvdir.setText(inmu.getDireccion());
+        Glide.with(context)
+                .load("https://192.168.0.101:45457"+inmu.getImagen())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.foto);
-        holder.tvdir.setText(lista.get(position).getDireccion());
+
 
         holder.ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("inmueble", i);
+                bundle.putSerializable("inmueble", inmu);
                 Navigation.findNavController(root).navigate(R.id.conDetalleFragment,bundle);
 
             }

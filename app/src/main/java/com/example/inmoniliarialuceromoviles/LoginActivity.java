@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements SensorEventListener {
     EditText mail, password;
@@ -50,6 +51,12 @@ public class LoginActivity extends AppCompatActivity implements SensorEventListe
 
         inicializarVista();
         lvm = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(LoginViewModel.class);
+        lvm.getError().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String error) {
+                Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
+            }
+        });
         lvm.getVisible().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {

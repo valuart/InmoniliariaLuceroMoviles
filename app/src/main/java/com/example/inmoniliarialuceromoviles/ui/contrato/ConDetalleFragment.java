@@ -24,7 +24,7 @@ import com.example.inmoniliarialuceromoviles.ui.inmueble.InmuDetalleViewModel;
 import java.text.SimpleDateFormat;
 
 public class ConDetalleFragment extends Fragment {
-    private TextView id, fechaIni, fechaF, monto, nomInqu, dirInm;
+    private TextView fechaIni, fechaF, monto, nomInqu, dirInm;
     private Button pagoAl;
     private ConDetalleViewModel cdViewModel;
 
@@ -45,17 +45,17 @@ public class ConDetalleFragment extends Fragment {
         cdViewModel.getContrato().observe(getViewLifecycleOwner(), new Observer<Contrato>() {
             @Override
             public void onChanged(Contrato contrato) {
-                id.setText(contrato.getIdContrato()+"");
-                fechaIni.setText(contrato.getFechaInicio());
-                fechaF.setText(contrato.getFechaFin());
-                monto.setText(contrato.getMontoAlquiler()+"");
+                //id.setText(contrato.getId()+"");
+                fechaIni.setText(contrato.getFechaInicio()+"");
+                fechaF.setText(contrato.getFechaFin()+"");
+                monto.setText(contrato.getMonto()+"");
                 nomInqu.setText(contrato.getInquilino().getNombre()+" "+contrato.getInquilino().getApellido());
                 dirInm.setText(contrato.getInmueble().getDireccion()+"");
                 pagoAl.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Bundle bundle = new Bundle();
-                        bundle.putSerializable("contrato", contrato);
+                        bundle.putSerializable("pagos", contrato);
                         Navigation.findNavController(view).navigate(R.id.pagoFragment, bundle);
 
                     }
@@ -68,7 +68,6 @@ public class ConDetalleFragment extends Fragment {
     }
 
     private void inicializar(View view) {
-        id = view.findViewById(R.id.tvTituloCodigo);
         fechaIni = view.findViewById(R.id.tvTitF);
         fechaF = view.findViewById(R.id.tvFecha);
         monto = view.findViewById(R.id.tvMonto);

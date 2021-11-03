@@ -1,46 +1,39 @@
 package com.example.inmoniliarialuceromoviles.modelo;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class Pago implements Serializable {
-    private int idPago;
-    private int numero;
-    private Contrato contrato;
+    private int id;
+    private int nroPago;
+    private String fechaPago;
     private double importe;
-    private String fechaDePago;
+    private Contrato contrato;
 
     public Pago() {}
 
-    public Pago(int idPago, int numero, Contrato contrato, double importe, String fechaDePago) {
-        this.idPago = idPago;
-        this.numero = numero;
-        this.contrato = contrato;
+    public Pago(int idPago, int nroPago, String fechaPago, double importe, Contrato contrato) {
+        this.id = id;
+        this.nroPago = nroPago;
         this.importe = importe;
-        this.fechaDePago = fechaDePago;
-    }
-
-    public int getIdPago() {
-        return idPago;
-    }
-
-    public void setIdPago(int idPago) {
-        this.idPago = idPago;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public Contrato getContrato() {
-        return contrato;
-    }
-
-    public void setContrato(Contrato contrato) {
+        this.fechaPago = fechaPago;
         this.contrato = contrato;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int idP) {
+        this.id= id;
+    }
+
+    public int getNroPago() {
+        return nroPago;
+    }
+
+    public void setNroPago(int nroPago) {
+        this.nroPago = nroPago;
     }
 
     public double getImporte() {
@@ -51,11 +44,19 @@ public class Pago implements Serializable {
         this.importe = importe;
     }
 
-    public String getFechaDePago() {
-        return fechaDePago;
+    public String getFechaPago() {
+        return fechaPago;
     }
 
-    public void setFechaDePago(String fechaDePago) {
-        this.fechaDePago = fechaDePago;
+    public void setFechaPago(String fechaDePago) {
+        this.fechaPago = fechaPago;
+    }
+
+    public Contrato getContrato() {
+        return contrato;
+    }
+
+    public void setContrato(Contrato contrato) {
+        this.contrato = contrato;
     }
 }

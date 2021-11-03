@@ -16,6 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Propietario;
 
@@ -53,9 +55,12 @@ public class PerfilFragment extends Fragment {
                 name.setText(propietario.getNombre());
                 lastName.setText(propietario.getApellido());
                 mail.setText(propietario.getEmail());
-                pass.setText(propietario.getContraseña());
+                pass.setText(propietario.getClave());
                 phone.setText(propietario.getTelefono());
-                avatarP.setImageResource(propietario.getAvatar());
+                Glide.with(vistaPerfil.getContext())
+                        .load("https://192.168.0.101:45457"+propietario.getAvatar())
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .into(avatarP);
 
             }
         });
@@ -119,11 +124,11 @@ public class PerfilFragment extends Fragment {
             public void onClick(View view) {
                 Propietario p = new Propietario();
                 p.setId(Integer.parseInt(id.getText().toString()));
-                p.setDni(Long.parseLong(document.getText().toString()));
                 p.setNombre(name.getText().toString());
                 p.setApellido(lastName.getText().toString());
+                p.setDni(document.getText().toString());
                 p.setEmail(mail.getText().toString());
-                p.setContraseña(pass.getText().toString());
+                p.setClave(pass.getText().toString());
                 p.setTelefono(phone.getText().toString());
 
                 pViewModel.editarDatos(p);

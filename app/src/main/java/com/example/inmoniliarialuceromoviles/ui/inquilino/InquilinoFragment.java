@@ -17,10 +17,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
+import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class InquilinoFragment extends Fragment {
     private RecyclerView rvInquilino;
@@ -39,9 +41,9 @@ public class InquilinoFragment extends Fragment {
         rvInquilino = root.findViewById(R.id.rvInquilinos);
 
 
-        inqViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<ArrayList<Inmueble>>() {
+        inqViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<List<Inmueble>>() {
             @Override
-            public void onChanged(ArrayList<Inmueble> inmuebles) {
+            public void onChanged(List<Inmueble> inmuebles) {
                 GridLayoutManager gridLayoutManager= new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
                 rvInquilino.setLayoutManager(gridLayoutManager);
                 ina = new InquilinoAdapter(inmuebles,root,getLayoutInflater());

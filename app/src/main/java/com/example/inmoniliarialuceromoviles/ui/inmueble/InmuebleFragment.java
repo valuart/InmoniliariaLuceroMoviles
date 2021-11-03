@@ -21,7 +21,7 @@ import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 
 public class InmuebleFragment extends Fragment {
@@ -40,9 +40,9 @@ public class InmuebleFragment extends Fragment {
         rvInmueble = root.findViewById(R.id.rvInmueble);
 
 
-        inmuebleViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<ArrayList<Inmueble>>() {
+        inmuebleViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<List<Inmueble>>() {
             @Override
-            public void onChanged(ArrayList<Inmueble> inmuebles) {
+            public void onChanged(List<Inmueble> inmuebles) {
                 GridLayoutManager gridLayoutManager= new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
                 rvInmueble.setLayoutManager(gridLayoutManager);
                 adapter = new InmuebleAdapter(inmuebles,root, getLayoutInflater());

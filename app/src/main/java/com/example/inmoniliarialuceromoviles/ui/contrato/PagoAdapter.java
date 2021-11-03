@@ -12,13 +12,14 @@ import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Pago;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PagoAdapter extends RecyclerView.Adapter<PagoAdapter.ViewHolder> {
-    private ArrayList<Pago> lista;
+    private List<Pago> lista;
     private View root;
     private LayoutInflater layoutInflater;
 
-    public PagoAdapter(ArrayList<Pago> pagos, View root, LayoutInflater layoutInflater) {
+    public PagoAdapter(List<Pago> pagos, View root, LayoutInflater layoutInflater) {
         this.lista = pagos;
         this.root = root;
         this.layoutInflater = layoutInflater;
@@ -33,11 +34,11 @@ public class PagoAdapter extends RecyclerView.Adapter<PagoAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull PagoAdapter.ViewHolder holder, int position) {
         Pago p = lista.get(position);
-        holder.codPago.setText(lista.get(position).getIdPago()+"");
-        holder.numPago.setText(lista.get(position).getNumero()+"");
-        holder.codCon.setText(lista.get(position).getContrato().getIdContrato()+"");
+        holder.codPago.setText(lista.get(position).getId()+"");
+        holder.numPago.setText(lista.get(position).getNroPago()+"");
+        holder.codCon.setText(lista.get(position).getContrato().getId()+"");
         holder.importe.setText(lista.get(position).getImporte()+"");
-        holder.fechaPago.setText(lista.get(position).getFechaDePago()+"");
+        holder.fechaPago.setText(lista.get(position).getFechaPago()+"");
 
     }
 

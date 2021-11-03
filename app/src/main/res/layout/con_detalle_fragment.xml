@@ -13,42 +13,15 @@
         android:background="@drawable/background">
 
         <LinearLayout
-            android:id="@+id/tvTituloCodigos"
-            android:layout_width="382dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="2dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.518"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/tvValorTituloCodigo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ID: "
-                android:textColor="#652BCC"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/tvTituloCodigo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="ID"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/tvTitFs"
             android:layout_width="380dp"
             android:layout_height="56dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="83dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.548"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloCodigos">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tvValorTitF"

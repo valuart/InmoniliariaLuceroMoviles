@@ -5,6 +5,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,14 +19,16 @@ import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class InmuebleAdapter extends RecyclerView.Adapter <InmuebleAdapter.ViewHolder> {
-    private ArrayList<Inmueble> lista;
+    private List<Inmueble> lista;
     private View root;
     private LayoutInflater layoutInflater;
+    private Context context;
 
-    public InmuebleAdapter(ArrayList<Inmueble> inmuebles, View root, LayoutInflater layoutInflater) {
+    public InmuebleAdapter(List<Inmueble> inmuebles, View root, LayoutInflater layoutInflater) {
         this.lista = inmuebles;
         this.root = root;
         this.layoutInflater = layoutInflater;
@@ -42,12 +45,12 @@ public class InmuebleAdapter extends RecyclerView.Adapter <InmuebleAdapter.ViewH
     @Override
     public void onBindViewHolder(@NonNull InmuebleAdapter.ViewHolder holder, int position) {
         Inmueble i = lista.get(position);
-        Glide.with(root.getContext())
-                .load(lista.get(position).getImagen())
+        Glide.with(context)
+                .load("https://192.168.0.101:45457"+i.getImagen())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.foto);
-        holder.tvdir.setText(lista.get(position).getDireccion());
-        holder.tvPre.setText(lista.get(position).getPrecio()+"");
+        holder.tvdir.setText(i.getDireccion());
+        holder.tvPre.setText(i.getPrecio()+"");
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

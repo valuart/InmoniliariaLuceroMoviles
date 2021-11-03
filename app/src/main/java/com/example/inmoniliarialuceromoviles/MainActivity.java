@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.inmoniliarialuceromoviles.modelo.Propietario;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -74,7 +76,10 @@ public class MainActivity extends AppCompatActivity {
         TextView nombre = header.findViewById(R.id.tvDirec);
         TextView email = header.findViewById(R.id.tvEmail);
         Propietario p = (Propietario) getIntent().getBundleExtra("propietario").getSerializable("propietario");
-        avatar.setImageResource(p.getAvatar());
+        Glide.with(header.getContext())
+                .load("https://192.168.0.101:45457"+p.getAvatar())
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(avatar);
         nombre.setText(p.getNombre());
         email.setText(p.getEmail());
     }
