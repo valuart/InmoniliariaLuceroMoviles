@@ -12,18 +12,20 @@ public class Propietario implements Serializable {
     private String telefono;
     private String email;
     private String clave;
-    private String avatar;
+    private int avatar;
 
-    public Propietario() {}
-    public Propietario(int id, String nombre, String apellido, String dni, String email, String clave, String telefono, String avatar) {
+    public Propietario() {
+    }
+
+    public Propietario(int id, String nombre, String apellido, String dni, String telefono, String email, String clave, int avatar) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
+        this.telefono = telefono;
         this.email = email;
         this.clave = clave;
-        this.telefono = telefono;
-        this.avatar=avatar;
+        this.avatar = avatar;
     }
 
     public int getId() {
@@ -82,11 +84,11 @@ public class Propietario implements Serializable {
         this.telefono = telefono;
     }
 
-    public String getAvatar() {
+    public int getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(String avatar) {
+    public void setAvatar(int avatar) {
         this.avatar = avatar;
     }
 

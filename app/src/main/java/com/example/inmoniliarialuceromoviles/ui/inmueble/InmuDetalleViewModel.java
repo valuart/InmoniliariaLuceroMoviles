@@ -65,9 +65,6 @@ public class InmuDetalleViewModel extends AndroidViewModel {
 
 
     }
-       /* ApiClient api = ApiClient.getApi();
-        i.setEstado(b);
-        api.actualizarInmueble(i);*/
 
 }
 

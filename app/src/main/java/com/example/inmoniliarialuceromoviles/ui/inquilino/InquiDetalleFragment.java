@@ -15,11 +15,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
-import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inquilino;
 
 public class InquiDetalleFragment extends Fragment {
-    private TextView id, nombre, apellido, dni, correo, telefono, telefonoGarante, nombreGarante, lugarTrabajo;
+    private TextView id, nombre, apellido, dni, correo, telefono;
     private InquiDetalleViewModel indeVM;
 
     public static InquiDetalleFragment newInstance() {
@@ -38,12 +37,12 @@ public class InquiDetalleFragment extends Fragment {
         indeVM.getInquilino().observe(getViewLifecycleOwner(), new Observer<Inquilino>() {
             @Override
             public void onChanged(Inquilino inquilino) {
-                id.setText(inquilino.getId() + "");
+                //id.setText(inquilino.getId() + "");
                 nombre.setText(inquilino.getNombre());
                 apellido.setText(inquilino.getApellido());
                 dni.setText(inquilino.getDni()+"");
-                correo.setText(inquilino.getEmail());
                 telefono.setText(inquilino.getTelefono());
+                correo.setText(inquilino.getEmail());
             }
         });
 
@@ -53,15 +52,14 @@ public class InquiDetalleFragment extends Fragment {
     }
 
     public void inicializar(View view){
-        id = view.findViewById(R.id.tvCodigo);
+        id = view.findViewById(R.id.tvCo);
         dni = view.findViewById(R.id.tvDNI);
         nombre = view.findViewById(R.id.tvNombre);
         apellido = view.findViewById(R.id.tvApellido);
-        lugarTrabajo = view.findViewById(R.id.tvLugarT);
-        correo = view.findViewById(R.id.tvEmail);
         telefono = view.findViewById(R.id.tvTelefono);
-        nombreGarante = view.findViewById(R.id.tvGarante);
-        telefonoGarante = view.findViewById(R.id.tvTelefonoGarante);
+        correo = view.findViewById(R.id.tvEmail);
+        //nombreGarante = view.findViewById(R.id.tvGarante);
+        //telefonoGarante = view.findViewById(R.id.tvTelefonoGarante);
 
     }
 

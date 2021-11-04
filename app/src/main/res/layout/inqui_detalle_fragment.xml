@@ -18,11 +18,12 @@
             android:layout_width="413dp"
             android:layout_height="74dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="93dp"
+            android:layout_marginTop="14dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.409"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/tvApellidos">
 
             <TextView
                 android:id="@+id/tvValorDNI"
@@ -45,12 +46,12 @@
             android:layout_width="416dp"
             android:layout_height="68dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="47dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDNIs">
+            app:layout_constraintTop_toBottomOf="@+id/tvCod">
 
             <TextView
                 android:id="@+id/tvValorNombre"
@@ -102,12 +103,12 @@
             android:layout_width="406dp"
             android:layout_height="53dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="27dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvApellidos">
+            app:layout_constraintTop_toBottomOf="@+id/tvTelefonos">
 
             <TextView
                 android:id="@+id/tvValorEmail"
@@ -127,44 +128,17 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tvLugarTs"
-            android:layout_width="410dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvEmails">
-
-            <TextView
-                android:id="@+id/tvValorLugarT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LUGAR DE TRABAJO: "
-                android:textColor="#6B3DBD"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvLugarT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Lugar de Trabajo"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/tvTelefonos"
             android:layout_width="410dp"
             android:layout_height="56dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="17dp"
             android:layout_marginEnd="1dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLugarTs">
+            app:layout_constraintTop_toBottomOf="@+id/tvDNIs">
 
             <TextView
                 android:id="@+id/tvTituloTelefono"
@@ -182,61 +156,16 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/tvGarantes"
-            android:layout_width="408dp"
-            android:layout_height="61dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.588"
+        <TextView
+            android:id="@+id/tvCod"
+            android:layout_width="99dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTelefonos">
-
-            <TextView
-                android:id="@+id/tvValorGarante"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="GARANTE: "
-                android:textColor="#693BBA"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvGarante"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="GARANTE"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tvTelefonoGarantes"
-            android:layout_width="395dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="4dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvGarantes">
-
-            <TextView
-                android:id="@+id/tvValorTelefonoGarante"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TELEFONO GARANTE: "
-                android:textColor="#673AB7"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvTelefonoGarante"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Telefono Garante"
-                android:textSize="20sp" />
-        </LinearLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

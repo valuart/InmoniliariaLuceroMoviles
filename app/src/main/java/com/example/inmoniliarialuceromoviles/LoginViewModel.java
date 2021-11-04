@@ -21,7 +21,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginViewModel extends AndroidViewModel {
-
     private MutableLiveData<Integer> visible;
     private MutableLiveData<String> error;
     private Context context;
@@ -30,6 +29,7 @@ public class LoginViewModel extends AndroidViewModel {
         super(application);
         this.context = application.getApplicationContext();
     }
+
 
     public MutableLiveData<Integer> getVisible() {
         if(visible == null){

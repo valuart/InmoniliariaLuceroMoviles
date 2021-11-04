@@ -25,7 +25,7 @@ import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 public class InmuDetalleFragment extends Fragment {
     private ImageView fotoInm;
-    private EditText id, direccion, uso, ambientes, tipo, precio;
+    private EditText id, direccion, tipo, precio;
     private CheckBox estado;
 
     private InmuDetalleViewModel mViewModel;
@@ -46,7 +46,7 @@ public class InmuDetalleFragment extends Fragment {
         mViewModel.getInmueble().observe(getViewLifecycleOwner(), new Observer<Inmueble>() {
             @Override
             public void onChanged(Inmueble inmueble) {
-                id.setText(inmueble.getIdInmueble() + "");
+                //id.setText(inmueble.getIdInmueble() + "");
                 direccion.setText(inmueble.getDireccion());
                 tipo.setText(inmueble.getTipo());
                 precio.setText(String.valueOf(inmueble.getPrecio()));
@@ -71,18 +71,12 @@ public class InmuDetalleFragment extends Fragment {
     }
 
      private void inicializar(View view){
-        id = view.findViewById(R.id.etCodigo);
+        id = view.findViewById(R.id.tvCod);
         direccion = view.findViewById(R.id.etDire);
-        uso = view.findViewById(R.id.etUso);
         tipo = view.findViewById(R.id.etTipo);
-        ambientes = view.findViewById(R.id.etAmbiente);
         precio = view.findViewById(R.id.etPrecio);
         estado = view.findViewById(R.id.cbEstado);
         fotoInm = view.findViewById(R.id.ivfotoInmu);
 
     }
-
-
-
-
 }

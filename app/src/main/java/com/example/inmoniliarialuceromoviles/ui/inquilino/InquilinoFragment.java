@@ -14,14 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Contrato;
-import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class InquilinoFragment extends Fragment {
@@ -29,9 +26,7 @@ public class InquilinoFragment extends Fragment {
     private InquilinoViewModel inqViewModel;
     private InquilinoAdapter ina;
 
-
-
-    @Override
+   @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
@@ -41,12 +36,12 @@ public class InquilinoFragment extends Fragment {
         rvInquilino = root.findViewById(R.id.rvInquilinos);
 
 
-        inqViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<List<Inmueble>>() {
+        inqViewModel.getContratos().observe(getViewLifecycleOwner(), new Observer<List<Contrato>>() {
             @Override
-            public void onChanged(List<Inmueble> inmuebles) {
+            public void onChanged(List<Contrato> contratos) {
                 GridLayoutManager gridLayoutManager= new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
                 rvInquilino.setLayoutManager(gridLayoutManager);
-                ina = new InquilinoAdapter(inmuebles,root,getLayoutInflater());
+                ina = new InquilinoAdapter(contratos,root,getLayoutInflater());
                 rvInquilino.setAdapter(ina);
 
 
@@ -57,7 +52,6 @@ public class InquilinoFragment extends Fragment {
 
 
     }
-
 
 
 }

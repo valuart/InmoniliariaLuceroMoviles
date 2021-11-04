@@ -22,7 +22,7 @@
         android:layout_width="182dp"
         android:layout_height="48dp"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="121dp"
         android:ems="10"
         android:enabled="false"
@@ -31,8 +31,9 @@
         android:minHeight="48dp"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDocument" />
+        app:layout_constraintTop_toBottomOf="@+id/ivFotoP" />
 
     <EditText
         android:id="@+id/etLastName"
@@ -52,9 +53,9 @@
     <EditText
         android:id="@+id/etDocument"
         android:layout_width="182dp"
-        android:layout_height="48dp"
+        android:layout_height="0dp"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:enabled="false"
         android:hint="@string/et_dni"
@@ -62,14 +63,14 @@
         android:minHeight="48dp"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivFotoP" />
+        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
 
     <EditText
         android:id="@+id/etCorreo"
         android:layout_width="183dp"
         android:layout_height="48dp"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="41dp"
         android:ems="10"
         android:enabled="false"
         android:hint="@string/et_mail"
@@ -77,29 +78,14 @@
         android:minHeight="48dp"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
-
-    <EditText
-        android:id="@+id/etPass"
-        android:layout_width="184dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:enabled="false"
-        android:hint="@string/et_password"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
 
     <EditText
         android:id="@+id/etPhone"
         android:layout_width="181dp"
         android:layout_height="48dp"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="23dp"
         android:ems="10"
         android:enabled="false"
         android:hint="@string/et_telefono"
@@ -107,16 +93,16 @@
         android:minHeight="48dp"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPass" />
+        app:layout_constraintTop_toBottomOf="@+id/etDocument" />
 
     <Button
         android:id="@+id/btEditar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="83dp"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="67dp"
+        android:layout_marginBottom="96dp"
         android:background="#AC51BC"
         android:hint="@string/bt_editar"
         android:text="Editar"
@@ -124,27 +110,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhone"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo" />
 
     <Button
         android:id="@+id/btGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="83dp"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="67dp"
+        android:layout_marginBottom="96dp"
         android:background="#B451C5"
         android:hint="@string/bt_guardar"
         android:text="Guardar"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhone"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo" />
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="59dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

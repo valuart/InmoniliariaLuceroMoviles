@@ -53,7 +53,7 @@ public class PagoAdapter extends RecyclerView.Adapter<PagoAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            codPago = itemView.findViewById(R.id.tvCp);
+            //codPago = itemView.findViewById(R.id.tvCp);
             numPago = itemView.findViewById(R.id.tvNumP);
             codCon = itemView.findViewById(R.id.tvCodC);
             importe = itemView.findViewById(R.id.tvImporte);

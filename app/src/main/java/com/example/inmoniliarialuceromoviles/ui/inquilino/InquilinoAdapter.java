@@ -20,7 +20,6 @@ import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 import com.example.inmoniliarialuceromoviles.modelo.Inquilino;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class InquilinoAdapter extends RecyclerView.Adapter<InquilinoAdapter.ViewHolder>  {
@@ -83,8 +82,5 @@ public class InquilinoAdapter extends RecyclerView.Adapter<InquilinoAdapter.View
 
         }
     }
-
-
-
 
 }

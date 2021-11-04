@@ -11,10 +11,8 @@ import androidx.lifecycle.MutableLiveData;
 
 
 import com.example.inmoniliarialuceromoviles.modelo.Contrato;
-import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 import com.example.inmoniliarialuceromoviles.request.ApiClient;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,12 +37,10 @@ public class ContratoViewModel extends AndroidViewModel {
 
 
     public void propiedadesAlquiladas() {
-        /*ApiClient api= ApiClient.getApi();
-        inmuebles.setValue(api.obtenerPropiedadesAlquiladas());*/
         SharedPreferences sp = ApiClient.conectar(context);
         String token = sp.getString("token", "-1");
         Call<List<Contrato>> con = ApiClient.getMyApiClient().obtenerInmueblesAlquilados(token);
-       con.enqueue(new Callback<List<Contrato>>() {
+        con.enqueue(new Callback<List<Contrato>>() {
             @Override
             public void onResponse(Call<List<Contrato>> call, Response<List<Contrato>> response) {
                 if (response.isSuccessful()) {
@@ -59,5 +55,4 @@ public class ContratoViewModel extends AndroidViewModel {
         });
 
     }
-
 }

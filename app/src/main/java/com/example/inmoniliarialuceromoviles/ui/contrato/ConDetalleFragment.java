@@ -18,13 +18,9 @@ import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Contrato;
-import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
-import com.example.inmoniliarialuceromoviles.ui.inmueble.InmuDetalleViewModel;
-
-import java.text.SimpleDateFormat;
 
 public class ConDetalleFragment extends Fragment {
-    private TextView fechaIni, fechaF, monto, nomInqu, dirInm;
+    private TextView id,fechaIni, fechaF, monto, nomInqu, dirInm;
     private Button pagoAl;
     private ConDetalleViewModel cdViewModel;
 
@@ -68,6 +64,7 @@ public class ConDetalleFragment extends Fragment {
     }
 
     private void inicializar(View view) {
+        id = view.findViewById(R.id.tvIdc);
         fechaIni = view.findViewById(R.id.tvTitF);
         fechaF = view.findViewById(R.id.tvFecha);
         monto = view.findViewById(R.id.tvMonto);

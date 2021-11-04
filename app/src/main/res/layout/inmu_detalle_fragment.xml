@@ -17,6 +17,7 @@
             android:layout_height="129dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="38dp"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
@@ -34,54 +35,35 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvUso"
-            android:layout_width="41dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="47dp"
-            android:layout_marginTop="20dp"
-            android:text="USO:"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDire" />
-
-        <TextView
             android:id="@+id/tvTipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="47dp"
+            android:layout_marginStart="48dp"
             android:layout_marginTop="20dp"
             android:text="TIPO:"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etUso" />
-
-        <TextView
-            android:id="@+id/tvAmbiente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="47dp"
-            android:layout_marginTop="20dp"
-            android:text="AMBIENTES:"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etTipo" />
+            app:layout_constraintTop_toBottomOf="@+id/etDire" />
 
         <TextView
             android:id="@+id/tvPre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="47dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="40dp"
             android:text="PRECIO:"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etAmbiente" />
+            app:layout_constraintTop_toBottomOf="@+id/etTipo" />
 
         <CheckBox
             android:id="@+id/cbEstado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="500dp"
-            android:layout_marginEnd="76dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="132dp"
+            android:minHeight="48dp"
             android:text="Disponible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivfotoInmu" />
+            app:layout_constraintTop_toBottomOf="@+id/etPrecio" />
 
         <EditText
             android:id="@+id/etDire"
@@ -94,18 +76,6 @@
             android:text="Name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDire" />
-
-        <EditText
-            android:id="@+id/etUso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="Name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvUso" />
 
         <EditText
             android:id="@+id/etTipo"
@@ -121,18 +91,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
 
         <EditText
-            android:id="@+id/etAmbiente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="Name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAmbiente" />
-
-        <EditText
             android:id="@+id/etPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,5 +102,16 @@
             android:text="Name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvPre" />
+
+        <TextView
+            android:id="@+id/tvCo"
+            android:layout_width="82dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="58dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

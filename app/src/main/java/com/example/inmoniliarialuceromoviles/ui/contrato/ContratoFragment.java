@@ -18,10 +18,8 @@ import android.widget.TextView;
 
 import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Contrato;
-import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ContratoFragment extends Fragment {
@@ -57,12 +55,8 @@ public class ContratoFragment extends Fragment {
             }
         });
 
-
         conViewModel.propiedadesAlquiladas();
         return root;
 
     }
-
-
-
 }

@@ -18,7 +18,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.inmoniliarialuceromoviles.R;
 import com.example.inmoniliarialuceromoviles.modelo.Contrato;
 import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
-import java.util.ArrayList;
+
 import java.util.List;
 
 

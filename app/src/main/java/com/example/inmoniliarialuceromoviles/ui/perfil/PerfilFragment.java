@@ -23,7 +23,6 @@ import com.example.inmoniliarialuceromoviles.modelo.Propietario;
 
 
 public class PerfilFragment extends Fragment {
-
     private PerfilViewModel pViewModel;
     private EditText name, lastName, document, mail, pass, phone;
     private TextView id;
@@ -98,12 +97,11 @@ public class PerfilFragment extends Fragment {
 
 
     private void inicializar(View vistaPerfil) {
-        id = vistaPerfil.findViewById(R.id.tvId);
+        //id = vistaPerfil.findViewById(R.id.tvId);
         document = vistaPerfil.findViewById(R.id.etDocument);
         name = vistaPerfil.findViewById(R.id.etName);
         lastName = vistaPerfil.findViewById(R.id.etLastName);
         mail = vistaPerfil.findViewById(R.id.etCorreo);
-        pass = vistaPerfil.findViewById(R.id.etPass);
         phone = vistaPerfil.findViewById(R.id.etPhone);
         avatarP = vistaPerfil.findViewById(R.id.ivFotoP);
         editar = vistaPerfil.findViewById(R.id.btEditar);
@@ -137,5 +135,4 @@ public class PerfilFragment extends Fragment {
         });
 
     }
-
 }

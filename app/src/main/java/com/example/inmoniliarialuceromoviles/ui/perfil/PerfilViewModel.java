@@ -59,7 +59,7 @@ public class PerfilViewModel extends AndroidViewModel {
     }
 
     //usuario Logueado
-    public void obtenerUsuarioActual() {
+     public void obtenerUsuarioActual() {
         SharedPreferences sp = ApiClient.conectar(context);
         String token = sp.getString("token","-1");
         Call<Propietario> prop = ApiClient.getMyApiClient().obtenerPropietario(token);
@@ -79,11 +79,7 @@ public class PerfilViewModel extends AndroidViewModel {
             }
         });
     }
-       /* ApiClient api = ApiClient.getApi();
-        Propietario p = api.obtenerUsuarioActual();
-        propietarioMutable.setValue(p);*/
-
-    public void editarDatos(Propietario p){
+      public void editarDatos(Propietario p) {
         SharedPreferences sp = ApiClient.conectar(context);
         String token = sp.getString("token","-1");
         Call<Propietario> prop = ApiClient.getMyApiClient().editarPropietario(token,p);
@@ -104,17 +100,11 @@ public class PerfilViewModel extends AndroidViewModel {
         });
 
     }
-        /*ApiClient api = ApiClient.getApi();
-        api.actualizarPerfil(p);
-        veditar.setValue(View.VISIBLE);
-        vguardar.setValue(View.INVISIBLE);*/
-
     public void guardarDatos(){
         editable.setValue(true);
         veditar.setValue(View.INVISIBLE);
         vguardar.setValue(View.VISIBLE);
 
     }
-
 
 }

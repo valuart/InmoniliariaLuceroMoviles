@@ -14,6 +14,7 @@ import com.example.inmoniliarialuceromoviles.modelo.Inmueble;
 import com.example.inmoniliarialuceromoviles.request.ApiClient;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -58,11 +59,5 @@ public class InmuebleViewModel extends AndroidViewModel {
             }
 
         });
-
-
-        /*ApiClient api = ApiClient.getApi();
-        inmuebles.setValue(api.obtnerPropiedades());*/
-
     }
-
 }
