@@ -1,7 +1,10 @@
 package com.example.inmoniliarialuceromoviles.modelo;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Pago implements Serializable {
     private int id;
@@ -45,8 +48,20 @@ public class Pago implements Serializable {
     }
 
     public String getFechaPago() {
-        return fechaPago;
+        String dia="";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        try {
+            Date d = dateFormat.parse(fechaPago);
+
+            dia = formato.format(d);
+        } catch (
+                ParseException e) {
+            e.printStackTrace();
+        }
+        return dia;
     }
+
 
     public void setFechaPago(String fechaDePago) {
         this.fechaPago = fechaPago;

@@ -70,9 +70,6 @@ public class ApiClient {
         @GET("Contrato")
         Call<List<Contrato>> obtenerInmueblesAlquilados(@Header("Authorization") String token);
 
-        @GET("contrato/{id}")
-        Call<Contrato>obtenerContrato(@Header("Authorization") String token, @Path("id") int id);
-
         @GET("Pagos/{id}")
         Call<List<Pago>>obtenerPagos(@Header("Authorization") String token, @Path("id") int id);
 
