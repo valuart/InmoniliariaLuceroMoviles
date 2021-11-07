@@ -52,22 +52,22 @@ public class ApiClient {
     public interface PostInterface {
 
         @FormUrlEncoded
-        @POST("Propietario/login")
+        @POST("Propietarios/login")
         Call<String> login(@Field("Email") String email, @Field("Clave") String clave);
 
-        @GET("Propietario/obtenerPropietario")
+        @GET("Propietarios/obtenerPropietario")
         Call<Propietario> obtenerPropietario(@Header("Authorization") String token);
 
-        @PUT("Propietario/editarPropietario")
+        @PUT("Propietarios/editarPropietario")
         Call<Propietario> editarPropietario(@Header("Authorization") String token, @Body Propietario propietario);
 
-        @GET("Inmueble")
+        @GET("Inmuebles")
         Call<List<Inmueble>> obtenerPropiedades(@Header("Authorization") String token);
 
-        @PUT("Inmueble/{id}")
+        @PUT("Inmuebles/{id}")
         Call<Inmueble> actualizarEstado(@Header("Authorization") String token, @Path("id") int id);
 
-        @GET("Contrato")
+        @GET("Contratos")
         Call<List<Contrato>> obtenerInmueblesAlquilados(@Header("Authorization") String token);
 
         @GET("Pagos/{id}")
