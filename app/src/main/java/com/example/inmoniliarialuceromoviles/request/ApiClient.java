@@ -55,10 +55,10 @@ public class ApiClient {
         @POST("Propietarios/login")
         Call<String> login(@Field("Email") String email, @Field("Clave") String clave);
 
-        @GET("Propietarios/obtenerPropietario")
+        @GET("Propietarios")
         Call<Propietario> obtenerPropietario(@Header("Authorization") String token);
 
-        @PUT("Propietarios/editarPropietario")
+        @PUT("Propietarios")
         Call<Propietario> editarPropietario(@Header("Authorization") String token, @Body Propietario propietario);
 
         @GET("Inmuebles")
