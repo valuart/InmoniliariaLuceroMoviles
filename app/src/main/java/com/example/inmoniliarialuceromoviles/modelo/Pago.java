@@ -9,18 +9,19 @@ import java.util.Date;
 public class Pago implements Serializable {
     private int id;
     private int nroPago;
-    private String fechaPago;
-    private double importe;
     private Contrato contrato;
+    private double importe;
+    private String fechaPago;
 
     public Pago() {}
 
-    public Pago(int idPago, int nroPago, String fechaPago, double importe, Contrato contrato) {
+    public Pago(int idPago, int nroPago,Contrato contrato, double importe, String fechaPago) {
         this.id = id;
         this.nroPago = nroPago;
+        this.contrato = contrato;
         this.importe = importe;
         this.fechaPago = fechaPago;
-        this.contrato = contrato;
+
     }
 
     public int getId() {
