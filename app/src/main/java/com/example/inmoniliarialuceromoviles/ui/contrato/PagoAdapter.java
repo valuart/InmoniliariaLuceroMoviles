@@ -36,7 +36,7 @@ public class PagoAdapter extends RecyclerView.Adapter<PagoAdapter.ViewHolder> {
         Pago p = lista.get(position);
         holder.codPago.setText(lista.get(position).getId()+"");
         holder.numPago.setText(lista.get(position).getNroPago()+"");
-        holder.codCon.setText(lista.get(position).getContrato().getId()+"");
+        holder.codCon.setText(lista.get(position).getEstado()+"");
         holder.importe.setText(lista.get(position).getImporte()+"");
         holder.fechaPago.setText(lista.get(position).getFechaPago()+"");
 
